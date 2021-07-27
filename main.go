@@ -6,8 +6,8 @@ import (
 	"net/http"
 )
 
-fun main() {
-	port:= flag.String("p", "9000", "port to serve on")
+func main() {
+	port := flag.String("p", "9000", "port to serve on")
 	directory := flag.String("d", "/home/prateek/dev_local/go/src/Basic_Restaurant_Menu/Menu1.pdf")
 	flag.Parse()
 
