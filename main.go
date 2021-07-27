@@ -8,7 +8,7 @@ import (
 
 func main() {
 	port := flag.String("p", "9000", "port to serve on")
-	directory := flag.String("d", "/home/prateek/dev_local/go/src/Basic_Restaurant_Menu/Menu1.pdf")
+	directory := flag.String("d", "/home/prateek/dev_local/go/src/Basic_Restaurant_Menu/Menu1.pdf", "menu")
 	flag.Parse()
 
 	http.Handle("/", http.FileServer(http.Dir(*directory)))
