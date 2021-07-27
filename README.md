@@ -3,7 +3,7 @@ I'm using this to serve menu via a webpage using Go Lang
 
 #### Golang Environment: Installation 
 1. Download the latest tarball from the Golan page. 
-2. remove any existing Go installation
+2. remove any existing Go installation:
   * sudo apt list --installed | grep gcc
   * sudo apt remove gccgo-go 
 3. Install the tar file: `sudo tar -C /usr/local -xzf go.1.16.5.linux-amd64.tar.gz`
