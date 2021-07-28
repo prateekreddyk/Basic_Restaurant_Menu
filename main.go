@@ -13,7 +13,7 @@ func main() {
 
 	http.Handle("/", http.FileServer(http.Dir(*directory)))
 
-	err := http.ListenAndServeTLS(":"+*port, "/home/prateek/dev_local/go/certs/pch-csr.cer", "/home/prateek/dev_local/go/certs/pch-pkey.pem", nil)
+	err := http.ListenAndServeTLS(":"+*port, "/home/prateek/server.crt", "/home/prateek/server.key", nil)
 
 	if err != nil {
 		log.Printf("Serving %s on HTTP port: %s\n", *directory, *port)
