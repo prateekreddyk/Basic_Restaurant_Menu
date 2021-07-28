@@ -15,8 +15,9 @@ func main() {
 
 	err := http.ListenAndServeTLS(":"+*port, "/home/prateek/dev_local/go/src/Basic_Restaurant_Menu/CERTS/pch-csr.cer", "/home/prateek/dev_local/go/src/Basic_Restaurant_Menu/CERTS/pch-pkey.pem", nil)
 
+	log.Printf("Serving %s on HTTP port: %s\n", *directory, *port)
+
 	if err != nil {
 		log.Fatal("ListenAndServeTLS: ", err)
-		log.Printf("Serving %s on HTTP port: %s\n", *directory, *port)
 	}
 }
