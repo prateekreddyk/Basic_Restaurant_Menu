@@ -24,7 +24,7 @@ mkdir pkg
 2. .bash_profile
 ```
 export GOPATH="/home/prateek/dev_local/go"
-export PATH=$PATH:/usr/local/go/bin:$GOPATH
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export GOTMPDIR="/home/prateel/dev_local/go/tmp"
 ```
 
