@@ -39,8 +39,9 @@ func HelloServer(w http.ResponseWriter, req *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/hello", HelloServer)
+	http.HandleFunc("/", HelloServer)
 	err := http.ListenAndServeTLS(":8443", "/home/prateek/pch-cert.crt", "/home/prateek/pch-pkey.pem", nil)
+	log.Println("Starting TLS on: 8443")
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)
 	}
