@@ -18,4 +18,5 @@ func main() {
 	if err != nil {
 		log.Fatal("ListenAndServeTLS: ", err)
 		log.Printf("Serving %s on HTTP port: %s\n", *directory, *port)
+	}
 }
