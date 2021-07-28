@@ -42,7 +42,7 @@ func main() {
 	log.Println("1.Starting TLS on: 8443")
 	http.HandleFunc("/", HelloServer)
 	log.Println("2.Starting TLS on: 8443")
-	err := http.ListenAndServeTLS(":8443", "/home/prateek/server.crt", "/home/prateek/server.key", nil)
+	err := http.ListenAndServeTLS(":8443", "~/server.crt", "~/server.key", nil)
 	log.Println("Starting TLS on: 8443")
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)
