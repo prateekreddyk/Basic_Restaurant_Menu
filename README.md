@@ -28,3 +28,40 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export GOTMPDIR="/home/prateel/dev_local/go/tmp"
 ```
 
+#### Creating Service for Webpage to run. 
+1. Create a service at `/etc/systemd/system/pch.service`
+2. Update the file using nano with below information.
+```
+[Unit]
+Description=pch service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=prateek
+ExecStart=/home/prateek/dev_local/go/bin/Basic_Restaurant_Menu
+
+[Install]
+WantedBy=multi-user.target
+
+```
+3. Start the service using below commands:
+```
+sudo systemctl daemon-reload
+sudo systemctl start pch.service
+```
+4. Verify the same using `sudo systemctl status pch.service`
+
+#### Bash file to run git commands
+1. Create a bash file using below commands with the file name `commit.sh --> customize it to your choice`.
+```
+#! /bin/zsh
+git add .
+git commit -m "Message"
+git push
+```
+2. Update permissions for the file using `chmod u+x commit.sh`
+3. Execute it using `./commit.sh`
