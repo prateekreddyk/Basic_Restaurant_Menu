@@ -65,3 +65,7 @@ git push
 ```
 2. Update permissions for the file using `chmod u+x commit.sh`
 3. Execute it using `./commit.sh`
+
+#### Issue you may run into
+1. Certs not accessible --> always check for permissions and the path
+2. Page not load even with successful executable run --> check to see both Ubuntu firewall ports and External facing firewall ports when using public IP or domain
