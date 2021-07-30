@@ -1,5 +1,5 @@
 #### Basic_Restaurant_Menu
-I'm using this to serve menu via a webpage using Go Lang
+I'm using this to serve a restaurant menu via a webpage using Go Lang and want to improve it further to a full blown website and a webapp where customers can play orders via their mobile web and it automatically gets updated to the restaurant KOT system.
 
 #### Golang Environment: Installation 
 1. Download the latest tarball from the Golan page. 
